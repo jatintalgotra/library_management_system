@@ -6,6 +6,7 @@ import library_management_system.models.student;
 import library_management_system.models.admin;
 import library_management_system.models.books;
 
+import java.io.File;
 // import java.util.ArrayList;
 // import java.util.List;
 import java.util.Scanner;
@@ -34,6 +35,11 @@ public class Management {
     public Management(){
         database = new db();
         scanner = new Scanner(System.in);  // Initialize scanner in constructor
+    }
+
+    public void addEBook(String fileName){
+        File file = new File("D:\\Projects\\LibraryManagSys\\library_management_system\\src\\test\\"+fileName+".pdf");
+        database.upload(file);
     }
 
     public void Register() {

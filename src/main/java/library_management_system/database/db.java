@@ -19,8 +19,7 @@ public class db {
     private List<books> bookList;
     private List<PDDocument> eBooks; 
 
-    public void upload(){
-        File file = new File("D:\\Projects\\LibraryManagSys\\library_management_system\\src\\test\\dummy.pdf");
+    public void upload(File file){
         try {
             PDDocument obj = PDDocument.load(file);
             eBooks.add(obj);

@@ -59,8 +59,11 @@ class Menu {
                     break;
                 
                 case 2:
-                    
-
+                    System.out.println("Enter E-Book name: ");
+                    String name = scanner.nextLine();
+                    lms.addEBook(name);
+                    System.out.println("Upload successfull!");
+                    loggedInMenu(user, lms);
                     break;
 
 
